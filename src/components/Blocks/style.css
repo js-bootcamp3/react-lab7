@@ -1,0 +1,10 @@
+.parent {
+  padding: 20px;
+  border: 1px solid black;
+  width: 400px;
+}
+
+.child {
+  border: 1px solid black;
+  padding: 20px;
+}
