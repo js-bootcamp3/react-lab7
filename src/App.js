@@ -2,6 +2,7 @@ import {createContext, useState} from 'react';
 import './App.css';
 import Parent from './components/Blocks/Parent';
 import { MemoBlock } from './components/Blocks/MemoBlock';
+import useThemeHook from './hooks/useThemeHook';
 
 const themes = {
   light: {
@@ -35,10 +36,9 @@ export const ThemeContext = createContext(themes.light);
 export const LangContext = createContext(langs.en);
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const {theme, setTheme, themeText} = useThemeHook()
   const [lang, setLang] = useState('en');
   const currentLang = lang === 'en' ? 'ru' : 'en';
-  const themeText = theme === 'light' ? 'dark' : 'light';
 
   return (
     <div>

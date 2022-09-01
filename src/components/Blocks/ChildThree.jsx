@@ -20,7 +20,7 @@ const ChildThree = props => {
     <>
       <div 
         id={id} 
-        style={{ background: theme.background, color: theme.foreground, fontSize: theme.fontSize }}
+        style={{ background: theme.background, color: theme.foreground, fontSize: theme.fontSze }}
       >
         <h1>ChildThree</h1>
         {isPending && 'Loading ...'}

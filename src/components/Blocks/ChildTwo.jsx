@@ -3,7 +3,7 @@ import './style.css'
 import { ThemeContext } from '../../App';
 
 const ChildTwo = forwardRef((props, ref) => {
-  const [text, setText] = useState('Child Two')
+  const [text, setText] = useState('Child Two');
   const theme = useContext(ThemeContext);
 
   useImperativeHandle(ref, () => ({
@@ -13,6 +13,7 @@ const ChildTwo = forwardRef((props, ref) => {
     }
   }))
   
+
   return (
     <div  
       style={{ background: theme.background, color: theme.foreground, fontSize: theme.fontSize }}
